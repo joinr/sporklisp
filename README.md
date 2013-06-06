@@ -8,7 +8,7 @@ What in the hell is sporklisp?
 
 Its a lisp interpreter I wrote in VBA, with Excel via the ability to call user defined
 functions from excel.  A lot of the concepts came from lisp wizards, particulalry the
-Structure and Interpretation of Computer Programs (SICP), Peter Norvigs excellent tutorials
+Structure and Interpretation of Computer Programs (SICP), Peter Norvig's excellent tutorials
 for LisPy and JScheme, and Christian Queinnecs Lisp in Small Pieces.
 
 Why is it called sporklisp?
@@ -57,10 +57,10 @@ structure (yes, VBA can do decent OOP quite well without some of the masochism i
 other languages - also without many of the benefits) into something with a much
 more functional style (to facilitate porting to a functional programming language).
 My idea was to use a little Lisp dialect for scripting entity behaviors and other
-lightweight stuff (I wanted first class functions too dammit).  I used Peter Norvigs
+lightweight stuff (I wanted first class functions too dammit).  I used Peter Norvig's
 LisPy example in Python to get me started (which is a lightweight implementation, but
 it uses a lot of Pythons features to easily import primitives...and python has first
-class functions already).  I had to cross-reference the implementation from Norvigs
+class functions already).  I had to cross-reference the implementation from Norvig's
 JScheme (which LisPy was a subset of), and adapt the solution to the unique challenges
 in VBA.  Finally, Chapter 4 of SICP (Structure and Interpretation of Computer Programs)
 was invaluable, as was Lisp in Small Pieces.
