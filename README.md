@@ -28,7 +28,7 @@ In short: environment, education, and experimentation.
 I come from an Operations Research background.
 In my little corner of the world, they preach that VBA is the
 coin of the realm.  OR types use spreadsheets a lot, VBA is readily available.
-Its almost like saying PHP is the common language of the web....Theyre both weak
+Its almost like saying PHP is the common language of the web....They're both weak
 scripting languages that have a surprising amount of market penetration
 due to just "being everywhere".  Prior to discovering the One True Way, I spent
 a LOT of time in VBA, using it as an environment to explore computer science and
@@ -48,7 +48,7 @@ you try it sometime :)
 How did you do it?
 ==================
 
-Ive spent unholy amounts of time in VBA over the last 5 years,
+I've spent unholy amounts of time in VBA over the last 5 years,
 and toward the end of my last project (prior to porting a 42K LOC simulation library +
 generic data structures + graph library + tons-of-stuff-vba-is-missing + my discrete
 event simulation) I decided to roll my own lisp in VBA.  At the time, I was already
@@ -107,7 +107,7 @@ multiple values.  Still, you can eval lisp expressions as formulas and chain the
 in a reactive manner just like normal excel stuff.  You can even bind vars from excel
 and make them available in the lisp environment.  Plenty of stuff doesnt work, but
 theres a pretty sizeable core language implemented already.  Macros are not implemented,
-although theyre a skip and a jump away.  Lots of stuff is implemented in pure VBA,
+although they're a skip and a jump away.  Lots of stuff is implemented in pure VBA,
 for "speed" purposes (that seems silly since VBA is interpreted anyway).
 
 If I "really" wanted a reactive spreadsheet, Id just wrap one in Swing with clojure
