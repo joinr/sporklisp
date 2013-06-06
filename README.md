@@ -102,7 +102,7 @@ Can I use sporklisp from Excel?
 
 The cool thing (and something I'm still working on in my spare time) is just using lisp
 for your formula logic in excel.  I need to do some more stuff to make the interop sweeter
-- like wrapping array formulas into operations like map or other functions that return
+like wrapping array formulas into operations like map or other functions that return
 multiple values.  Still, you can eval lisp expressions as formulas and chain them along
 in a reactive manner just like normal excel stuff.  You can even bind vars from excel
 and make them available in the lisp environment.  Plenty of stuff doesn't work, but
