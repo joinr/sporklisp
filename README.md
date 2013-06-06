@@ -37,7 +37,7 @@ of VBA, although I was mightily impressed to see "just" how far you can push VBA
 so inclined.  sporklisp is an example of pushing VBA to do things it really wasn't intended to.
 It's also a way to provide an embedded programming environment for a lisp dialect that can be
 used in office products.  Finally, having lisp in the spreadsheet can provide some advantages
-although I do most of my "real" work in a lisp repl (these days it's Clojure).  Finally finally,
+although I do most of my "real" work in a lisp repl (these days it's Clojure).  Finally,
 most lispers go through a learning phase where, as in the Structure and Interpretation of Computer
 Programs (by Abelson and Sussman), they show you how to implement your own lisp.  Lisp in Small Pieces
 by Queinnec also explores a lot of ways to implement your favorite lisp dialect.  By the time I started
