@@ -117,4 +117,33 @@ it's sliding up the cool scale because, as it's VBA, it's embeddable in any Offi
 (as long as MS continues to support VBA).  Just like clojure lets me live in Java without
 writing Java, one could theoretically live in VBA without writing VBA under sporklisp.
 
+
+Is it safe? 
+===========
+
+There are loads of things that are NOT implemented and/or tested.  At its best,
+sporklisp is in alpha.  That being said, there is a decent set of functionality
+that works and has been tested.  
+
+Weak Areas
+----------
+1. Narrow Equivalence/Equality functions.
+2. Limited Numeric Tower (no ratios, conversions need to be locked down a bit).
+3. File support is lacking (although load-file exists, it hasn't been used much).
+4. Error messages aren't bubbling up right, so feedback is weak (particularly if you're calling from a spreadsheet)
+5. Macros not yet implemented (this is lisp dammit, we should have macros!).
+6. TCO not yet implemented, but doable.  
+7. Blend of two lisps, so the differences need to be clarified.
+8. Some cluttered classes and modules that are placeholders or obsolete.
+
+Strongish Areas
+---------------
+1. Define and call functions from the spreadsheet, or better yet, in vba.
+2. Lexical scope.
+3. Unified sequence library, ala clojure.  Uses lazy sequences, so it's also 
+   efficient.
+4. Significant portion of scheme implemented.
+5. Looks, acts and feels like scheme, and can look, act, and feel like clojure.
+6. A working example of implementing a lisp environment in another non-lisp.
+
 -Tom
