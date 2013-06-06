@@ -117,4 +117,4 @@ it's sliding up the cool scale because, as it's VBA, it's embeddable in any Offi
 (as long as MS continues to support VBA).  Just like clojure lets me live in Java without
 writing Java, one could theoretically live in VBA without writing VBA under sporklisp.
 
--Tom Spoon
+-Tom
