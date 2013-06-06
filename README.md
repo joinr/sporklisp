@@ -9,13 +9,13 @@ What in the hell is sporklisp?
 Its a lisp interpreter I wrote in VBA, with Excel via the ability to call user defined
 functions from excel.  A lot of the concepts came from lisp wizards, particulalry the
 Structure and Interpretation of Computer Programs (SICP), Peter Norvig's excellent tutorials
-for LisPy and JScheme, and Christian Queinnecs Lisp in Small Pieces.
+for LisPy and JScheme, and Christian Queinnec's Lisp in Small Pieces.
 
 Why is it called sporklisp?
 =============================
 
 Originally, I intended to build a small lisp for a VBA-based set of libraries called
-SPORK (Spoons Operations Research Kit).  These libs were designed to support a sizeable
+SPORK (Spoon's Operations Research Kit).  These libs were designed to support a sizeable
 discrete event simulation, and ended up including a ton of generic libraries and features
 grafted onto VBA to facilitate a more functional style of programming.  sporklisp was
 a piece of SPORK, but its existence merited a stand-alone library.
@@ -33,9 +33,9 @@ scripting languages that have a surprising amount of market penetration
 due to just "being everywhere".  Prior to discovering the One True Way, I spent
 a LOT of time in VBA, using it as an environment to explore computer science and
 software engineering, while facilitating my OR job.  Eventually, I outgrew the bounds
-of VBA, although I was mightily impressed to see "just" how far you can push VBA if youre
-so inclined.  sporklisp is an example of pushing VBA to do things it really wasnt intended to.
-Its also a way to provide an embedded programming environment for a lisp dialect that can be
+of VBA, although I was mightily impressed to see "just" how far you can push VBA if you're
+so inclined.  sporklisp is an example of pushing VBA to do things it really wasn't intended to.
+It's also a way to provide an embedded programming environment for a lisp dialect that can be
 used in office products.  Finally, having lisp in the spreadsheet can provide some advantages
 although I do most of my "real" work in a lisp repl (these days its Clojure).  Finally finally,
 most lispers go through a learning phase where, as in the Structure and Interpretation of Computer
@@ -59,7 +59,7 @@ more functional style (to facilitate porting to a functional programming languag
 My idea was to use a little Lisp dialect for scripting entity behaviors and other
 lightweight stuff (I wanted first class functions too dammit).  I used Peter Norvig's
 LisPy example in Python to get me started (which is a lightweight implementation, but
-it uses a lot of Pythons features to easily import primitives...and python has first
+it uses a lot of Python's features to easily import primitives...and python has first
 class functions already).  I had to cross-reference the implementation from Norvig's
 JScheme (which LisPy was a subset of), and adapt the solution to the unique challenges
 in VBA.  Finally, Chapter 4 of SICP (Structure and Interpretation of Computer Programs)
@@ -78,7 +78,7 @@ It also has reader support for JSON literals, which may be useful.  It does NOT 
 persistent data structures that make clojure cool, so youre stuck with the humble list.
 It DOES have lazy/infinite sequences, so you can play some cool tricks.  The sequence library
 alone is probably worth using overe stock VBA.  Keywords exist, as per Clojure.  I dont have them
-mirroring clojure semantics exactly, so you cant "apply" them to a map to get the associated value...
+mirroring clojure semantics exactly, so you can't "apply" them to a map to get the associated value...
 yet.  I am close to having macros implemented, at which point I might re-write a ton of sporklisp in
 sporklisp.
 
@@ -87,10 +87,10 @@ What about performance, and stability?
 
 sporklisp is actually fast enough for lots of scripting...although I havent really tested the upper
 bounds of its reasonable performance (i.e. doing numeric work).  I would not recommend building a monster
-spreadsheet and having tons of lispfuncs in the formulas...that might be untenable (I dont know yet).
+spreadsheet and having tons of lispfuncs in the formulas...that might be untenable (I don't know yet).
 sporklisp currently has some ineffeciencies - the largest of which is VBA.  VBA is an interpreted language,
 and it has a really wonky garbage collector.  Large programs, or large spreadsheets, may cause sporklisp to
-leak memory, or they may just be slow.  On the plus side, sporklisps evaluation model uses VBA dictionaries to
+leak memory, or they may just be slow.  On the plus side, sporklisp's evaluation model uses VBA dictionaries to
 store environments, so cost of looking up definitions is pretty cheap.  On the down side, the base type for
 lists is actually the vba collection, which is a bit heavy weight.  Most lisps use a simple cons-cell, or a pair,
 or represent lists as chunks of arrays, which provide much better cache coherence and speed.  Even in VBA, itd be
@@ -100,22 +100,21 @@ is fast enough for you, old man!
 Can I use sporklisp from Excel?
 ===============================
 
-The cool thing (and something Im still working on in my spare time) is just using lisp
+The cool thing (and something I'm still working on in my spare time) is just using lisp
 for your formula logic in excel.  I need to do some more stuff to make the interop sweeter
 - like wrapping array formulas into operations like map or other functions that return
 multiple values.  Still, you can eval lisp expressions as formulas and chain them along
 in a reactive manner just like normal excel stuff.  You can even bind vars from excel
-and make them available in the lisp environment.  Plenty of stuff doesnt work, but
-theres a pretty sizeable core language implemented already.  Macros are not implemented,
+and make them available in the lisp environment.  Plenty of stuff doesn't work, but
+there's a pretty sizeable core language implemented already.  Macros are not implemented,
 although they're a skip and a jump away.  Lots of stuff is implemented in pure VBA,
 for "speed" purposes (that seems silly since VBA is interpreted anyway).
 
 If I "really" wanted a reactive spreadsheet, Id just wrap one in Swing with clojure
 driving the dataflow evaluation.  Much easier (and its been done already), and you
 basically just get another way to talk to the repl.  This is more of a toy project, but
-its sliding up the cool scale because, as its VBA, its embeddable in any Office product
+it's sliding up the cool scale because, as its VBA, its embeddable in any Office product
 (as long as MS continues to support VBA).  Just like clojure lets me live in Java without
 writing Java, one could theoretically live in VBA without writing VBA under sporklisp.
-
 
 -Tom Spoon
