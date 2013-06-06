@@ -135,6 +135,7 @@ Weak Areas
 6. TCO not yet implemented, but doable.  
 7. Blend of two lisps, so the differences need to be clarified.
 8. Some cluttered classes and modules that are placeholders or obsolete.
+9. Loads more...
 
 Strongish Areas
 ---------------
@@ -145,5 +146,8 @@ Strongish Areas
 4. Significant portion of scheme implemented.
 5. Looks, acts and feels like scheme, and can look, act, and feel like clojure.
 6. A working example of implementing a lisp environment in another non-lisp.
+7. You can inspect the entire lisp environment from VBA, and debug, deconstruct
+   the evaluation in realtime.  That's pretty cool for learning about a lisp.
+8. Allows VBA to have first-class functions.
 
 -Tom
