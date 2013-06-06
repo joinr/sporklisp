@@ -6,7 +6,7 @@ A horrifying experiment in implementing a lisp in VBA.  Plus there's excel inter
 What in the hell is sporklisp?
 =============================
 
-Its a lisp interpreter I wrote in VBA, with Excel via the ability to call user defined
+It's a lisp interpreter I wrote in VBA, with Excel via the ability to call user defined
 functions from excel.  A lot of the concepts came from lisp wizards, particulalry the
 Structure and Interpretation of Computer Programs (SICP), Peter Norvig's excellent tutorials
 for LisPy and JScheme, and Christian Queinnec's Lisp in Small Pieces.
@@ -28,7 +28,7 @@ In short: environment, education, and experimentation.
 I come from an Operations Research background.
 In my little corner of the world, they preach that VBA is the
 coin of the realm.  OR types use spreadsheets a lot, VBA is readily available.
-Its almost like saying PHP is the common language of the web....They're both weak
+It's almost like saying PHP is the common language of the web....They're both weak
 scripting languages that have a surprising amount of market penetration
 due to just "being everywhere".  Prior to discovering the One True Way, I spent
 a LOT of time in VBA, using it as an environment to explore computer science and
@@ -37,12 +37,12 @@ of VBA, although I was mightily impressed to see "just" how far you can push VBA
 so inclined.  sporklisp is an example of pushing VBA to do things it really wasn't intended to.
 It's also a way to provide an embedded programming environment for a lisp dialect that can be
 used in office products.  Finally, having lisp in the spreadsheet can provide some advantages
-although I do most of my "real" work in a lisp repl (these days its Clojure).  Finally finally,
+although I do most of my "real" work in a lisp repl (these days it's Clojure).  Finally finally,
 most lispers go through a learning phase where, as in the Structure and Interpretation of Computer
 Programs (by Abelson and Sussman), they show you how to implement your own lisp.  Lisp in Small Pieces
 by Queinnec also explores a lot of ways to implement your favorite lisp dialect.  By the time I started
 getting decent in Clojure, Common Lisp, and Scheme, I felt of sufficient maturity to implement a lisp.
-This is my first foray into doing so.  Its been great fun and incredibly educational.  I highly recommend
+This is my first foray into doing so.  It's been great fun and incredibly educational.  I highly recommend
 you try it sometime :)
 
 How did you do it?
@@ -94,7 +94,7 @@ leak memory, or they may just be slow.  On the plus side, sporklisp's evaluation
 store environments, so cost of looking up definitions is pretty cheap.  On the down side, the base type for
 lists is actually the vba collection, which is a bit heavy weight.  Most lisps use a simple cons-cell, or a pair,
 or represent lists as chunks of arrays, which provide much better cache coherence and speed.  Even in VBA, itd be
-better for sporklisp to use variant arrays for everything, where its currently using collections.  Still, sporklisp
+better for sporklisp to use variant arrays for everything, where it's currently using collections.  Still, sporklisp
 is fast enough for you, old man!
 
 Can I use sporklisp from Excel?
@@ -111,9 +111,9 @@ although they're a skip and a jump away.  Lots of stuff is implemented in pure V
 for "speed" purposes (that seems silly since VBA is interpreted anyway).
 
 If I "really" wanted a reactive spreadsheet, Id just wrap one in Swing with clojure
-driving the dataflow evaluation.  Much easier (and its been done already), and you
+driving the dataflow evaluation.  Much easier (and it's been done already), and you
 basically just get another way to talk to the repl.  This is more of a toy project, but
-it's sliding up the cool scale because, as its VBA, its embeddable in any Office product
+it's sliding up the cool scale because, as it's VBA, it's embeddable in any Office product
 (as long as MS continues to support VBA).  Just like clojure lets me live in Java without
 writing Java, one could theoretically live in VBA without writing VBA under sporklisp.
 
