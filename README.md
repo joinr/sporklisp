@@ -6,7 +6,7 @@ A horrifying experiment in implementing a lisp in VBA.  Plus there's excel inter
 What in the hell is sporklisp?
 =============================
 
-It's a lisp interpreter I wrote in VBA, with Excel via the ability to call user defined
+It's a lisp interpreter I wrote in VBA, with Excel interop via the ability to call user defined
 functions from excel.  A lot of the concepts came from lisp wizards, particulalry the
 Structure and Interpretation of Computer Programs (SICP), Peter Norvig's excellent tutorials
 for LisPy and JScheme, and Christian Queinnec's Lisp in Small Pieces.
